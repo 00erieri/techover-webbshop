@@ -2,6 +2,8 @@ import * as actionTypes from './actionTypes';
 
 export const resetCart = () => ({ type: actionTypes.RESET_CART });
 
+export const calculateTotalCartAmount = () => {};
+
 export const incrementProduct = (payload) => {
 	return { type: actionTypes.INCREMENT_PRODUCT, payload };
 };
