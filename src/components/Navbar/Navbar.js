@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useHistory } from 'react-router-dom';
+import CartButton from '../CartButton/CartButton';
 
 const Navbar = (props) => {
 	const history = useHistory();
@@ -14,14 +15,12 @@ const Navbar = (props) => {
 			<AppBar position="static">
 				<Toolbar>
 					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-						Techover
+						Erik's webbshop
 					</Typography>
-					<Button onClick={() => history.push('/checkout')} color="inherit">
-						Checkout
-					</Button>
 					<Button onClick={() => history.push('/')} color="inherit">
 						Products
 					</Button>
+					<CartButton />
 				</Toolbar>
 			</AppBar>
 		</Box>

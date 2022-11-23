@@ -22,7 +22,6 @@ export const fetchProducts = () => {
 	return async (dispatch) => {
 		dispatch(fetchProductsStart());
 		try {
-			await sleep(5000); // TA BORT SEN!
 			const response = await fetch('https://fakestoreapi.com/products');
 			const data = await response.json();
 			dispatch(fetchProductsSuccess(data));

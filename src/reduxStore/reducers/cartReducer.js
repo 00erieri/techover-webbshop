@@ -1,4 +1,3 @@
-import { FilterTiltShiftRounded, ThreeSixtyRounded } from '@mui/icons-material';
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
@@ -25,7 +24,7 @@ const reducer = (state = initialState, action) => {
 			const incrementedArray = incrementProducts(state.orders, action);
 			return {
 				...state,
-				orders: [...state.orders, action.payload]
+				orders: incrementedArray
 			};
 
 		case actionTypes.DECREMENT_PRODUCT:
